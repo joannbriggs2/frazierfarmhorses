@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Righteous");
+
+body {
+  margin: 0;
+  font-family: "Comfortaa", cursive;
+  background: lightgray;
+}
+
+.box {
+  border: 1px solid black;
+  /* margin-left: 1em; */
+  /* margin-right: auto; */
+  width: 20em;
+  background-color: white;
+  border-radius: 10%;
+}
+
+.box2 {
+    border: 1px solid black;
+    /* margin-left: 1em; */
+    /* margin-right: auto; */
+    width: 20em;
+    background-color: white;
+    border-radius: 5%;
+
+  }
+  
+.money::before {
+    content:"$";
+}
+
+h1 {
+  font-family: "Righteous", cursive;
+  background: rgb(109, 102, 102);
+  margin: 0;
+  margin-bottom: 0.5em;
+  padding: 1em;
+  text-align: center;
+}
+
+button {
+  padding: 0.3em;
+  background: rgb(62, 162, 180);
+  border-radius: 5%;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  color: black;
+  font-size: 1.5em;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
+  font-size: 2em;
+  display: block;
+  /* margin-left: 2em;
+  /* margin-right: auto; */
+  width: 5em; */
+}
+.jumbotron {
+    height: 35em;
+    width: 20em;
+    display: block;
+    margin-top:2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.buy {
+  padding: 0.3em;
+  background: rgb(62, 162, 180);
+  border-radius: 10%;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  font-size: 0.5em;
+  margin-left: 0.5em;
+  height: 3em;
+  width: 5em;
+}
+
+.otherButtons {
+    padding: 0.3em;
+    background: rgb(62, 162, 180);
+    border-radius: 10%;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+    font-size: 0.5em;
+    margin-left: 0.5em;
+    height: 3em;
+    width: 10em;
+  }
+  
+.column {
+  margin-top: 1em;
+  margin-left: 0.5em;
+}
+.hidden {
+  background: rgb(147, 135, 167);
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.buttonSection {
+margin-top: 5em;
+}
+img {height: 7em;
+width: 7em;}

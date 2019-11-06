@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/main.css" />
+
+    <title>Products</title>
+  </head>
+  <body>
+    <h1>NEW PRODUCT</h1>
+    <button class="center"><a href="/mongoose_store">Back To Main</a></button>
+
+    <form action="/mongoose_store" method="POST">
+      <fieldset class="logsInfo">
+        <legend>Product</legend>
+        <input type="text" name="name" id="name" placeholder="Product Name" />
+        <input
+          type="textarea"
+          name="description"
+          id="description"
+          placeholder="Product Description"
+        />
+        <input type="text" name="img" id="img" placeholder="Product Img" />
+        <input type="number" name="price" id="price" placeholder="Price" />
+        <input type="number" name="qty" id="qty" placeholder="Quantity" />
+      </fieldset>
+      <input type="submit" class="otherButtons" value="SUBMIT" />
+    </form>
+  </body>
+</html>
