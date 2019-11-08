@@ -9,14 +9,10 @@ router.get("/new", (req, res) => {
 router.post("/", (req, res) => {
   User.findOne({ username: req.body.username }, (err, foundUser) => {
     if (foundUser) {
-      if (bcrypt.compareSync(req.body.password, foundUser.password)) {
-        req.session.currentUser = foundUser;
-        res.redirect("/");
-      } else {
-        res.send('<a href="/">Wrong password or user go back</a>');
-      }
+      console.log("redirect to horses");
+      res.redirect("horses/");
     } else {
-      res.send('<a href="/">Wrong user or password go back</a>');
+      res.send('<a href="/">Wrong password or user go back</a>');
     }
   });
 });

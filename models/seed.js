@@ -80,17 +80,16 @@ module.exports = [
     price: 0
   },
   {
-    name: "Henrietta",
-    nickname: "Rita",
-    ownername: "Sue Peterson ",
-    gender: "Mare",
-    age: "7",
-    breed: "Draft Cross",
-    color: "chestnut",
-    height: "16h",
-    img: "http://bluelips.com/prod_images_large/bones1.jpg",
-    supplements: "1 Safe Choice",
-    forSale: true,
-    price: 10000
+    name: "Tiberius",
+    nickname: "Duey, Duey Decimal",
+    ownername: "Rosanne Hermenze",
+    gender: "Gelding",
+    age: "16",
+    breed: "American Show Horse (Arabian, Standardbread)",
+    color: "bay",
+    height: "15.2h",
+    img:
+      "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/71492266_10220042504398371_9079052837832359936_o.jpg?_nc_cat=107&_nc_oc=AQn8tHnkiRqSIaWxJyGZ4agxw_jnaSCjSXG_iORuoNweJBN-4DYV3FwUWJVrf7PGe6Y&_nc_ht=scontent-lga3-1.xx&oh=aab3febe99d15b2fcf28ba8cba833eb6&oe=5E4F6946",
+    supplements: "1/2 lb Red Cell, 1 scoop Cosequin"
   }
 ];

@@ -9,22 +9,51 @@
     <title>horses</title>
   </head>
   <body>
-    <h1>NEW PRODUCT</h1>
-    <button class="center"><a href="/mongoose_store">Back To Main</a></button>
+    <h1>Add Horse Info</h1>
+    <button class="center">
+      <a href="/horses">Back To Main</a>
+    </button>
 
-    <form action="/mongoose_store" method="POST">
+    <form action="/horses" method="POST">
       <fieldset class="logsInfo">
-        <legend>Horse</legend>
-        <input type="text" name="name" id="name" placeholder="Product Name" />
+        <legend>Owner Info</legend>
+
+        <input type="text" name="ownername" id="ownername" placeholder="name" />
+
         <input
-          type="textarea"
-          name="description"
-          id="description"
-          placeholder="Product Description"
+          type="text"
+          name="onwernickname"
+          id="ownernickname"
+          placeholder="nickname"
         />
-        <input type="text" name="img" id="img" placeholder="Horse Picture" />
-        <input type="number" name="price" id="price" placeholder="Price" />
-        <input type="number" name="qty" id="qty" placeholder="Quantity" />
+        <legend>Horse Info</legend>
+
+        <input type="text" name="name" id="name" placeholder="name" />
+
+        <input type="text" name="img" id="img" placeholder="picture" />
+        <input
+          type="text"
+          name="nickname"
+          id="nickname"
+          placeholder="nickname"
+        />
+
+        <input type="text" name="gender" id="gender" placeholder="gender" />
+
+        <input type="text" name="age" id="age" placeholder="age" />
+
+        <input type="text" name="breed" id="breed" placeholder="breed" />
+
+        <input type="text" name="color" id="color" placeholder="color" />
+
+        <input type="text" name="height" id="height" placeholder="height" />
+
+        <input
+          type="supplements"
+          name="supplements"
+          id="supplements"
+          placeholder="feed schedule"
+        />
       </fieldset>
       <input type="submit" class="otherButtons" value="SUBMIT" />
     </form>

@@ -7,6 +7,7 @@ users.get("/new", (req, res) => {
 });
 
 users.post("/", (req, res) => {
+  console.log("in create user");
   User.create(req.body, (err, createdUser) => {
     if (err) {
       console.log(err);

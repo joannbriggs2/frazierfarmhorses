@@ -14,34 +14,94 @@
 
     <form action="/horses/<%=horse.id%>?_method=PUT" method="POST">
       <fieldset class="horseInfo">
-        <legend>horses</legend>
+        <legend>Owner Info</legend>
+
+        <input
+          type="text"
+          name="ownername"
+          id="ownername"
+          value="<%= horse.ownername %>"
+          placeholder="name"
+        />
+
+        <input
+          type="text"
+          name="ownernickname"
+          id="ownernickname"
+          value="<%= horse.ownernickname %>"
+          placeholder="nickname"
+        />
+        <legend>Horse Info</legend>
+
         <input
           type="text"
           name="name"
           id="name"
           value="<%= horse.name %>"
-          placeholder="Horse Name"
+          placeholder="name"
+        />
+
+        <input
+          type="text"
+          name="img"
+          id="img"
+          value="<%= horse.img %>"
+          placeholder="picture"
         />
         <input
           type="text"
           name="nickname"
           id="nickname"
           value="<%= horse.nickname %>"
-          placeholder="Horse Nickname"
+          placeholder="nickname"
         />
+
         <input
           type="text"
-          name="img"
-          id="img"
-          value="<%= horse.img %>"
-          placeholder="Horse Img"
+          name="gender"
+          id="gender"
+          value="<%= horse.gender %>"
+          placeholder="gender"
         />
+
         <input
-          type="number"
-          name="price"
-          id="price"
-          value="<%= horse.price %>"
-          placeholder="Price"
+          type="text"
+          name="age"
+          id="age"
+          value="<%= horse.age %>"
+          placeholder="age"
+        />
+
+        <input
+          type="text"
+          name="breed"
+          id="breed"
+          value="<%= horse.breed %>"
+          placeholder="breed"
+        />
+
+        <input
+          type="text"
+          name="color"
+          id="color"
+          value="<%= horse.color %>"
+          placeholder="color"
+        />
+
+        <input
+          type="text"
+          name="height"
+          id="height"
+          value="<%= horse.height %>"
+          placeholder="height"
+        />
+
+        <input
+          type="supplements"
+          name="supplements"
+          id="supplements"
+          value="<%= horse.supplements %>"
+          placeholder="feed schedule"
         />
       </fieldset>
       <input type="submit" class="otherButtons" value="SUBMIT" />

@@ -64,7 +64,7 @@ router.get("/:id/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  horses.create(req.body, (error, createHorse) => {
+  Horses.create(req.body, (error, createHorse) => {
     if (error) {
       res.send(error);
     } else {

@@ -32,9 +32,6 @@
       <p>Height: <%= horse.height %></p>
       <p>Feed Instructions: <%= horse.supplements %></p>
 
-      <% if(horse.forSale === true){ %>
-      <p class="money"><%= horse.price %></p>
-      <% } %>
       <div class="buttonSection">
         <form action="/horses/<%= horse.id %>?_method=DELETE" method="POST">
           <input type="submit" class="otherButtons" value="DELETE" />
