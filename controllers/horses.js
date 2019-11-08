@@ -5,11 +5,13 @@ const methodOverride = require("method-override");
 router.use(methodOverride("_method"));
 const horsesSeed = require("../models/seed.js");
 
-// Horses.collection.drop();
-// Horses.create(horsesSeed, (err, data) => {
-//   if (err) console.log(err.message);
-//   console.log("added horse data");
-// });
+router.get("/seed", (req, res) => {
+  Horses.collection.drop();
+  Horses.create(horsesSeed, (err, data) => {
+    if (err) console.log(err.message);
+    console.log("added horse data");
+  });
+});
 
 //Index
 router.get("/", (req, res) => {
