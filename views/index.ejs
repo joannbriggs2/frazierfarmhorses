@@ -1,43 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-  <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  />
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="/main.css" />
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <title>FrazierFarm</title>
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>MONGOOSE STORE PRODUCTS</h1>
-
-    <button class="center">
-      <a href="/mongoose_store/new">Create New Product</a>
-    </button>
-
-    <div class="container">
-      <div class="column">
-        <div class="row">
-          <% products.forEach((product) => { %>
-          <ul class="box">
-            <li>
-              <%= product.name %>
-              <a href="/mongoose_store/<%=product.id %>" class="img-thumbnail"
-                ><img src=<%=product.img; %>>
-              </a>
-              <p class="money"><%= product.price %></p>
-            </li>
-          </ul>
-
-          <% }) %>
-        </div>
+    <!-- ====== TOP HEADER BAR ====== -->
+    <div class="header">
+      <!-- title -->
+      <div class="header-title">
+        <img src="img/logo.jpg" alt="Frazier Farm Logo" />
+        <h1>FRAZIER FARM FEEDING SCHEDULE</h1>
+      </div>
+      <!-- navigation -->
+      <div class="header-nav">
+        <ul>
+          <li>
+            <a href="/horses">Horses</a>
+          </li>
+          <!-- add your link to create a user here -->
+          <li><a href="/users/new">New Account</a></li>
+          <!-- add your link to the log in page here -->
+          <li><a href="/sessions/new">Log In</a></li>
+          <!-- add your form button to log out here -->
+          <li></li>
+        </ul>
       </div>
     </div>
-
-    <script src="server.js"></script>
+    <!-- ===== MAIN SPLASH PAGE CONTENT ===== -->
+    <div class="main">
+      <!-- image -->
+      <img src="img/index.jpg" alt="Callie and Razzle Dazzle jumping" />
+      <!-- about -->
+      <div class="main-abt">
+        <h1>FRAZIER FARM</h1>
+        Frazier Farm is an eventing focused facility that offers boarding,
+        training, lessons, and shows to the community of Litchfield county and
+        beyond.
+      </div>
+    </div>
   </body>
 </html>

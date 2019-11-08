@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/css/main.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>FRAZIER FARM HORSES</h1>
+    <button class="center">
+      <a href="/horses/new">Add Horse</a>
+    </button>
+    <button class="center">
+      <a href="/horses/daily">Daily Feed Schedule</a>
+    </button>
+    <div class="container">
+      <div class="column">
+        <div class="row">
+          <% horses.forEach((horse) => { %>
+          <ul class="box">
+            <li>
+              <%= horse.name %>
+              <a href="/horses/<%=horse.id %>" class="img-thumbnail"
+                ><img src=<%=horse.img; %>>
+              </a>
+              <%= horse.nickname %>
+            </li>
+          </ul>
+
+          <% }) %>
+        </div>
+      </div>
+    </div>
+
+    <script src="server.js"></script>
+  </body>
+</html>

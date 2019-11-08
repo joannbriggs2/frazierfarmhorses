@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <title>Horse</title>
+  </head>
+  <body>
+    <button class="center">
+      <a href="/horses">Back To Main</a>
+    </button>
+    <div class="jumbotron">
+      <h2><%= horse.name %></h2>
+      <p><img src=<%=horse.img; %>></p>
+      <p>Nickname: <%= horse.nickname %></p>
+      <p>Owner: <%= horse.ownername %></p>
+      <p>Owner Nickname: <%= horse.ownernickname %></p>
+      <p>Gender: <%= horse.gender %></p>
+      <p>Age: <%= horse.age %></p>
+      <p>Breed: <%= horse.breed %></p>
+      <p>Color: <%= horse.color %></p>
+      <p>Height: <%= horse.height %></p>
+      <p>Feed Instructions: <%= horse.supplements %></p>
+
+      <% if(horse.forSale === true){ %>
+      <p class="money"><%= horse.price %></p>
+      <% } %>
+      <div class="buttonSection">
+        <form action="/horses/<%= horse.id %>?_method=DELETE" method="POST">
+          <input type="submit" class="otherButtons" value="DELETE" />
+        </form>
+        <form action="/horses/<%= horse.id %>/edit">
+          <input type="submit" class="otherButtons" value="EDIT" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

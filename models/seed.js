@@ -1,25 +1,91 @@
 module.exports = [
   {
-    name: "Beans",
-    description:
-      "A small pile of beans. Buy more beans for a big pile of beans.",
-    img:
-      "https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2",
-    price: 5,
-    qty: 99
-  },
-  {
-    name: "Bones",
-    description: "It's just a bag of bones.",
+    name: "Razzle Dazzle",
+    nickname: "Razz",
+    ownername: "Callie Switz",
+    ownernickname: "Switz",
+    gender: "gelding",
+    age: "10",
+    breed: "thoroughbred/appaloosa",
+    color: "chesnut with spots",
+    height: "15.2",
     img: "http://bluelips.com/prod_images_large/bones1.jpg",
-    price: 25,
-    qty: 0
+    supplements: "1 lb red cell 2x daily. Prevacox 1x daily",
+    forSale: false,
+    price: 0
   },
   {
-    name: "Bins",
-    description: "A stack of colorful bins for your beans and bones.",
-    img: "http://www.clipartbest.com/cliparts/9cz/rMM/9czrMMBcE.jpeg",
-    price: 7000,
-    qty: 1
+    name: "Illini Dry Peppy",
+    nickname: "Ryder",
+    ownername: "Mallory Briggs",
+    ownernickname: "Mal",
+    gender: "gelding",
+    age: "16",
+    breed: "Quarter Horse",
+    color: "Buckskin",
+    height: "15h",
+    img: "http://bluelips.com/prod_images_large/bones1.jpg",
+    supplements: "1 lb safechoice - 1/2 cup horsesheen - 1 cup aloe",
+    forSale: false,
+    price: 0
+  },
+  {
+    name: "La Mariposa (the butterfly)",
+    nickname: "Posa",
+    ownername: "Rosanne Hermenze",
+    ownernickname: "Ro",
+    gender: "mare",
+    age: "7",
+    breed: "Azteca (quarter horse/andelusion)",
+    color: "black",
+    height: "15h",
+    img: "http://bluelips.com/prod_images_large/bones1.jpg",
+    supplements: "1/2 lb Red Cell",
+    forSale: false,
+    price: 0
+  },
+  {
+    name: "Finnegan",
+    nickname: "Finn",
+    ownername: "JoAnn Briggs",
+    gender: "Gelding",
+    age: "9",
+    breed: "Grade",
+    color: "bay",
+    height: "15h",
+    img: "http://bluelips.com/prod_images_large/bones1.jpg",
+    supplements:
+      "1lb SafeChoice, 1/2 cup horsesheen, 1/2 cup milk thistle, 1/4 cup magnesium",
+    forSale: false,
+    price: 0
+  },
+  {
+    name: "Runs With Scissors",
+    nickname: "Kurt",
+    ownername: "Brianna Fortin",
+    ownernickname: "Bri",
+    gender: "Gelding",
+    age: "9",
+    breed: "OTTD",
+    color: "Grey",
+    height: "16h",
+    img: "http://bluelips.com/prod_images_large/bones1.jpg",
+    supplements: "1/2 lb Red Cell",
+    forSale: false,
+    price: 0
+  },
+  {
+    name: "Henrietta",
+    nickname: "Rita",
+    ownername: "Sue Peterson ",
+    gender: "Mare",
+    age: "7",
+    breed: "Draft Cross",
+    color: "chestnut",
+    height: "16h",
+    img: "http://bluelips.com/prod_images_large/bones1.jpg",
+    supplements: "1 Safe Choice",
+    forSale: true,
+    price: 10000
   }
 ];
