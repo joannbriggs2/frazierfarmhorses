@@ -5,6 +5,8 @@ const methodOverride = require("method-override");
 router.use(methodOverride("_method"));
 const horsesSeed = require("../models/seed.js");
 
+//seed the data
+
 router.get("/seed", (req, res) => {
   Horses.collection.drop();
   Horses.create(horsesSeed, (err, data) => {
@@ -13,7 +15,7 @@ router.get("/seed", (req, res) => {
   });
 });
 
-//Index
+//Main Page
 router.get("/", (req, res) => {
   console.log("in get");
   Horses.find({}, (error, allhorses) => {
@@ -26,7 +28,7 @@ router.get("/", (req, res) => {
     }
   });
 });
-// Index - daily feed schedule
+// Index - daily feed schedule - route
 router.get("/daily", (req, res) => {
   console.log("in get");
   Horses.find({}, (error, allhorses) => {
@@ -40,12 +42,12 @@ router.get("/daily", (req, res) => {
   });
 });
 
-//New
+//New route
 router.get("/new", (req, res) => {
   res.render("horses/new.ejs", {});
 });
 
-//   //edit
+//edit route
 router.get("/:id/edit", (req, res) => {
   Horses.findById(req.params.id, (err, foundHorse) => {
     if (err) {
@@ -58,13 +60,14 @@ router.get("/:id/edit", (req, res) => {
   });
 });
 
-//show
+//show route
 router.get("/:id/", (req, res) => {
   Horses.findById(req.params.id, (err, foundHorse) => {
     res.render("horses/show.ejs", { horse: foundHorse });
   });
 });
 
+// New Post Route
 router.post("/", (req, res) => {
   Horses.create(req.body, (error, createHorse) => {
     if (error) {
@@ -75,6 +78,7 @@ router.post("/", (req, res) => {
   });
 });
 
+// Edit put route
 router.put("/:id", (req, res) => {
   let parmId = req.params.id;
   Horses.findByIdAndUpdate(req.params.id, req.body, (err, updatedHorse) => {
@@ -86,6 +90,7 @@ router.put("/:id", (req, res) => {
   });
 });
 
+// Delete route
 router.delete("/:id", (req, res) => {
   Horses.findByIdAndRemove(req.params.id, (err, deletedHorse) => {
     if (err) {

@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/main.css" />
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="/css/main.css" />
-
-    <title>Horse</title>
+    <title>FRAZIER FARM</title>
   </head>
-  <body>
-    <button class="center">
-      <a href="/horses">Back To Main</a>
-    </button>
+
+    <div class="header">
+      <!-- title -->
+      <div class="header-title">
+        <img src="../img/logo.jpg" alt="Frazier Farm Logo" />
+        <h1>BOARDER INFO</h1>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li>
+            <a href="/horses">Back To Main</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <div class="jumbotron">
-      <h2><%= horse.name %></h2>
+      <h2><%= horse.nickname %></h2>
       <p><img src=<%=horse.img; %>></p>
-      <p>Nickname: <%= horse.nickname %></p>
-      <p>Owner: <%= horse.ownername %></p>
-      <p>Owner Nickname: <%= horse.ownernickname %></p>
+      <p>Full Name: <%= horse.name %></p>
+      <p>Owner: <%= horse.ownerName %></p>
+      <p>Owner Nickname: <%= horse.ownerNickname %></p>
+      <p>Type of Board: <%= horse.typeOfBoard %></p>
       <p>Gender: <%= horse.gender %></p>
       <p>Age: <%= horse.age %></p>
       <p>Breed: <%= horse.breed %></p>
       <p>Color: <%= horse.color %></p>
       <p>Height: <%= horse.height %></p>
       <p>Feed Instructions: <%= horse.supplements %></p>
-
       <div class="buttonSection">
         <form action="/horses/<%= horse.id %>?_method=DELETE" method="POST">
           <input type="submit" class="otherButtons" value="DELETE" />

@@ -1,3 +1,4 @@
+// DEPENDENCIES
 const express = require("express");
 const app = express();
 const port = 3000;
@@ -21,23 +22,21 @@ const mongoose = require("mongoose");
 const db = mongoose.connection;
 const PORT = process.env.PORT || 3000;
 
-// app.use(
-//   session({
-//     secret: process.env.SECRET,
-//     resave: false,
-//     saveUninitialized: false
-//   })
-// );
+app.use(
+  session({
+    secret: "Finnegan",
+    resave: false,
+    saveUninitialized: false
+  })
+);
 
-// app.listen(3000, () => {
-//   console.log("I am listening");
-// });
 app.listen(PORT, () => console.log("Listening on port:", PORT));
 
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
+///session data
 app.use(
   session({
     secret: "finnegan", //some random string
@@ -45,7 +44,7 @@ app.use(
     saveUninitialized: false
   })
 );
-//check mongo connection with crud connection
+//check mongo connection
 // mongoose.connect("mongodb://localhost:27017/frazierfarmhorses", {
 //   useNewUrlParser: true
 // });

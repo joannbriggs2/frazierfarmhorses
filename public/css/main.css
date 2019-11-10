@@ -1,5 +1,55 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Righteous");
 
+.header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 10px;
+}
+.header-title {
+  font-family: "Montserrat", helvetica;
+  font-size: 0.9em;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-title img {
+  width: 100px;
+  height: 100px;
+}
+.header-title h1 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #444;
+  margin-left: 10px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-nav ul {
+  list-style-type: none;
+}
+.header-nav li {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+.header-nav a {
+  color: royalblue;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease-in;
+  font-size: 0.8em;
+}
+.header-nav a:hover {
+  color: #444;
+  transition: 0.3s ease-in;
+}
+
 body {
   margin: 0;
   font-family: "Comfortaa", cursive;
@@ -11,31 +61,23 @@ body {
   /* margin-left: 1em; */
   /* margin-right: auto; */
   width: 20em;
+  height: 20em;
   background-color: white;
-  border-radius: 10%;
+  border-radius: 5%;
+  margin-left: 1em;
 }
 
 .box2 {
-    border: 1px solid black;
-    /* margin-left: 1em; */
-    /* margin-right: auto; */
-    width: 20em;
-    background-color: white;
-    border-radius: 5%;
-
-  }
-  
-.money::before {
-    content:"$";
+  border: 1px solid black;
+  /* margin-left: 1em; */
+  /* margin-right: auto; */
+  width: 40em;
+  background-color: white;
+  border-radius: 5%;
 }
 
-h1 {
-  font-family: "Righteous", cursive;
-  background: rgb(109, 102, 102);
-  margin: 0;
-  margin-bottom: 0.5em;
-  padding: 1em;
-  text-align: center;
+.money::before {
+  content: "$";
 }
 
 button {
@@ -47,27 +89,26 @@ button {
   color: black;
   font-size: 1.5em;
 }
-a {
-  text-decoration: none;
-  color: black;
-}
-li {
+.box li {
   list-style: none;
   font-size: 2em;
   display: block;
-  /* margin-left: 2em;
-  /* margin-right: auto; */
-  width: 5em; */
+  width: 5em;
+}
+li {
+  list-style: none;
+  display: block;
 }
 .jumbotron {
-    height: 35em;
-    width: 20em;
-    display: block;
-    margin-top:2em;
+  height: 60em;
+  width: auto;
+  display: block;
+  margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
 }
-.buy {
+
+.otherButtons {
   padding: 0.3em;
   background: rgb(62, 162, 180);
   border-radius: 10%;
@@ -76,21 +117,9 @@ li {
   font-size: 0.5em;
   margin-left: 0.5em;
   height: 3em;
-  width: 5em;
+  width: 10em;
 }
 
-.otherButtons {
-    padding: 0.3em;
-    background: rgb(62, 162, 180);
-    border-radius: 10%;
-    text-decoration: none;
-    text-shadow: 1px 1px 1px black;
-    font-size: 0.5em;
-    margin-left: 0.5em;
-    height: 3em;
-    width: 10em;
-  }
-  
 .column {
   margin-top: 1em;
   margin-left: 0.5em;
@@ -105,7 +134,20 @@ li {
   width: 50%;
 }
 .buttonSection {
-margin-top: 5em;
+  margin-top: 1em;
 }
-img {height: 7em;
-width: 7em;}
+.nick {
+  font-family: "Montserrat", helvetica;
+  font-size: 2em;
+  font-weight: 700;
+}
+.supp {
+  font-family: "Montserrat", helvetica;
+  font-size: 1em;
+  font-weight: 200;
+}
+
+img {
+  height: 7em;
+  width: 7em;
+}

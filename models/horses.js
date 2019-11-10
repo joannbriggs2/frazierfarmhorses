@@ -3,8 +3,9 @@ const mongoose = require("mongoose");
 const horseschema = new mongoose.Schema({
   name: { type: String, required: true },
   nickname: { type: String },
-  ownername: { type: String },
-  ownernickname: { type: String },
+  ownerName: { type: String },
+  ownerNickname: { type: String },
+  typeOfBoard: { type: String },
   gender: { type: String },
   age: { type: String },
   breed: { type: String },

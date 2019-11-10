@@ -10,23 +10,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>FRAZIER FARM</title>
   </head>
   <body>
-    <h1>FRAZIER FARM HORSES DAILY FEED SCHEDULE</h1>
+    <div class="header">
+      <!-- title -->
+      <div class="header-title">
+        <img src="/img/logo.jpg" alt="Frazier Farm Logo" />
+        <h1>DAILY FEED SCHEDULE</h1>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li>
+            <a href="/horses">Back To Main</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <div class="container">
       <div class="column">
         <div class="row">
-          <% horses.forEach((horse) => { %>
-          <li>
-            <%= horse.nickname %> <%= horse.supplements %>
-          </li>
-          <% }) %>
+          <% horses.forEach((horse) => { %> <% if (horse.typeOfBoard == "full")
+          { %>
+          <ul class="box">
+            <li class="nick">
+              <%= horse.nickname %>
+            </li>
+            <li class="supp">
+              <%= horse.supplements %>
+            </li>
+          </ul>
+          <% } %> <% }) %>
         </div>
       </div>
     </div>
-
-    <script src="server.js"></script>
   </body>
 </html>

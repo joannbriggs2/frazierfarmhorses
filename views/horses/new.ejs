@@ -1,61 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/main.css" />
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="/main.css" />
-
-    <title>horses</title>
+    <title>FRAZIER FARM</title>
   </head>
+
   <body>
-    <h1>Add Horse Info</h1>
-    <button class="center">
-      <a href="/horses">Back To Main</a>
-    </button>
+    <div class="header">
+      <!-- title -->
+      <div class="header-title">
+        <img src="../img/logo.jpg" alt="Frazier Farm Logo" />
+        <h1>Add New Boarder</h1>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li>
+            <a href="/horses">Back To Main</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <form action="/horses" method="POST">
       <fieldset class="logsInfo">
-        <legend>Owner Info</legend>
-
-        <input type="text" name="ownername" id="ownername" placeholder="name" />
-
-        <input
-          type="text"
-          name="onwernickname"
-          id="ownernickname"
-          placeholder="nickname"
-        />
-        <legend>Horse Info</legend>
-
-        <input type="text" name="name" id="name" placeholder="name" />
-
-        <input type="text" name="img" id="img" placeholder="picture" />
-        <input
-          type="text"
-          name="nickname"
-          id="nickname"
-          placeholder="nickname"
-        />
-
-        <input type="text" name="gender" id="gender" placeholder="gender" />
-
-        <input type="text" name="age" id="age" placeholder="age" />
-
-        <input type="text" name="breed" id="breed" placeholder="breed" />
-
-        <input type="text" name="color" id="color" placeholder="color" />
-
-        <input type="text" name="height" id="height" placeholder="height" />
-
-        <input
-          type="supplements"
-          name="supplements"
-          id="supplements"
-          placeholder="feed schedule"
-        />
+        <div class="jumbotron">
+          <legend>Owner Info</legend>
+          <li>
+            <input
+              type="text"
+              name="ownerName"
+              id="ownerName"
+              placeholder="name"
+            />
+          </li>
+          <li>
+            <input
+              type="text"
+              name="onwernickname"
+              id="ownerNickname"
+              placeholder="nickname"
+            />
+          </li>
+          <legend>Horse Info</legend>
+          <li>
+            <input type="text" name="name" id="name" placeholder="name" />
+          </li>
+          <li>
+            <input
+              type="text"
+              size="40"
+              name="img"
+              id="img"
+              placeholder="http link to picture"
+            />
+          </li>
+          <li>
+            <input
+              type="text"
+              name="nickname"
+              id="nickname"
+              placeholder="nickname"
+            />
+          </li>
+          <li>
+            <input
+              type="text"
+              name="typeOfBoard"
+              id="typeOfBoard"
+              placeholder="type of board"
+            />
+          </li>
+          <li>
+            <input type="text" name="gender" id="gender" placeholder="gender" />
+          </li>
+          <li>
+            <input type="text" name="age" id="age" placeholder="age" />
+          </li>
+          <li>
+            <input type="text" name="breed" id="breed" placeholder="breed" />
+          </li>
+          <li>
+            <input type="text" name="color" id="color" placeholder="color" />
+          </li>
+          <li>
+            <p>Feed Schedule</p>
+          </li>
+          <li>
+            <textarea
+              rows="5"
+              cols="40"
+              name="supplements"
+              id="supplements"
+              placeholder="feed schedule"
+            >
+            </textarea>
+          </li>
+          <li>
+            <input type="submit" class="otherButtons" value="SUBMIT" />
+          </li>
+        </div>
       </fieldset>
-      <input type="submit" class="otherButtons" value="SUBMIT" />
     </form>
   </body>
 </html>

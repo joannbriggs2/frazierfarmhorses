@@ -1,110 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/css/main.css" />
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="/main.css" />
-
-    <title>horses</title>
+    <title>FRAZIER FARM</title>
   </head>
+
   <body>
-    <h1>Edit Horses</h1>
-    <button class="center"><a href="/horses">Back To Main</a></button>
+    <div class="header">
+      <!-- title -->
+      <div class="header-title">
+        <img src="/img/logo.jpg" alt="Frazier Farm Logo" />
+        <h1>EDIT BOARDER INFO</h1>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li>
+            <a href="/horses">Back To Main</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <form action="/horses/<%=horse.id%>?_method=PUT" method="POST">
-      <fieldset class="horseInfo">
-        <legend>Owner Info</legend>
+      <fieldset>
+        <div class="jumbotron">
+          <legend>Owner Info</legend>
+          <li>
+            <label for="ownerName">name</label>
+            <input
+              type="text"
+              name="ownerName"
+              id="ownerName"
+              value="<%= horse.ownerName %>"
+              placeholder="name"
+            />
+          </li>
 
-        <input
-          type="text"
-          name="ownername"
-          id="ownername"
-          value="<%= horse.ownername %>"
-          placeholder="name"
-        />
+          <li>
+            <label for="ownerNickname">nickname</label>
+            <input
+              type="text"
+              name="ownerNickname"
+              id="ownerNickname"
+              value="<%= horse.ownerNickname %>"
+              placeholder="nickname"
+            />
+          </li>
 
-        <input
-          type="text"
-          name="ownernickname"
-          id="ownernickname"
-          value="<%= horse.ownernickname %>"
-          placeholder="nickname"
-        />
-        <legend>Horse Info</legend>
-
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value="<%= horse.name %>"
-          placeholder="name"
-        />
-
-        <input
-          type="text"
-          name="img"
-          id="img"
-          value="<%= horse.img %>"
-          placeholder="picture"
-        />
-        <input
-          type="text"
-          name="nickname"
-          id="nickname"
-          value="<%= horse.nickname %>"
-          placeholder="nickname"
-        />
-
-        <input
-          type="text"
-          name="gender"
-          id="gender"
-          value="<%= horse.gender %>"
-          placeholder="gender"
-        />
-
-        <input
-          type="text"
-          name="age"
-          id="age"
-          value="<%= horse.age %>"
-          placeholder="age"
-        />
-
-        <input
-          type="text"
-          name="breed"
-          id="breed"
-          value="<%= horse.breed %>"
-          placeholder="breed"
-        />
-
-        <input
-          type="text"
-          name="color"
-          id="color"
-          value="<%= horse.color %>"
-          placeholder="color"
-        />
-
-        <input
-          type="text"
-          name="height"
-          id="height"
-          value="<%= horse.height %>"
-          placeholder="height"
-        />
-
-        <input
-          type="supplements"
-          name="supplements"
-          id="supplements"
-          value="<%= horse.supplements %>"
-          placeholder="feed schedule"
-        />
+          <legend>Horse Info</legend>
+          <li>
+            <label for="name">name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value="<%= horse.name %>"
+              placeholder="name"
+            />
+          </li>
+          <li class="horseImage">
+            <label for="picture">link to picture</label>
+            <input
+              type="text"
+              size="40"
+              name="img"
+              id="img"
+              value="<%= horse.img %>"
+              placeholder="picture"
+            />
+          </li>
+          <li>
+            <label for="nickname">nickname</label>
+            <input
+              type="text"
+              name="nickname"
+              id="nickname"
+              value="<%= horse.nickname %>"
+              placeholder="nickname"
+            />
+          </li>
+          <li>
+            <label for="typeOfBoard">type of board</label>
+            <input
+              type="text"
+              name="typeOfBoard"
+              id="typeOfBoard"
+              value="<%= horse.typeOfBoard %>"
+              placeholder="typeOfBoard"
+            />
+          </li>
+          <li>
+            <label for="gender">gender</label>
+            <input
+              type="text"
+              name="gender"
+              id="gender"
+              value="<%= horse.gender %>"
+              placeholder="gender"
+            />
+          </li>
+          <li>
+            <label for="age">age</label>
+            <input
+              type="text"
+              name="age"
+              id="age"
+              value="<%= horse.age %>"
+              placeholder="age"
+            />
+          </li>
+          <li>
+            <label for="breed">breed</label>
+            <input
+              type="text"
+              name="breed"
+              id="breed"
+              value="<%= horse.breed %>"
+              placeholder="breed"
+            />
+          </li>
+          <li>
+            <label for="color">color</label>
+            <input
+              type="text"
+              name="color"
+              id="color"
+              value="<%= horse.color %>"
+              placeholder="color"
+            />
+          </li>
+          <li>
+            <label for="height">height</label>
+            <input
+              type="text"
+              name="height"
+              id="height"
+              value="<%= horse.height %>"
+              placeholder="height"
+            />
+          </li>
+          <p>Feed Schedule</p>
+          <li>
+            <textarea
+              rows="5"
+              cols="40"
+              name="supplements"
+              placeholder="feed schedule"
+            >
+    "<%= horse.supplements %>"</textarea
+            >
+          </li>
+          <input type="submit" class="otherButtons" value="SUBMIT" />
+        </div>
       </fieldset>
-      <input type="submit" class="otherButtons" value="SUBMIT" />
     </form>
   </body>
 </html>
