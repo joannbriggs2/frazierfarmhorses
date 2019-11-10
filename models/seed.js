@@ -120,5 +120,20 @@ module.exports = [
     img:
       "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/59229856_10218350686947003_8043773270601760768_n.jpg?_nc_cat=101&_nc_oc=AQnfXyq0oWnFlA0l2NUQoHDwZ_kp810agOwM9QowFUroMUHe8Hv93C5okDsOlXE1-Ss&_nc_ht=scontent-lga3-1.xx&oh=f30e11de19013ae1804851a072c2cfb2&oe=5E45135C",
     supplements: "Safe Choice, HorseSheen, Magnesium"
+  },
+  {
+    name: "Nova",
+    nickname: "Nova",
+    ownerName: "Corinne Gagnon",
+    typeOfBoard: "full",
+
+    gender: "Baby Mare",
+    age: "1 year",
+    breed: "Clydsdale/thoroughbred",
+    color: "bay",
+    height: "14h",
+    img:
+      "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/52948618_2430196193675920_9039140359585660928_n.jpg?_nc_cat=100&_nc_oc=AQl46YJNvi48L9f2FFJf2aZsqifDkxpRv_gH425bb_Xhn5gEiayBTYnSDOHPqQz198c&_nc_ht=scontent-lga3-1.xx&oh=6e5188cba60e91365a3eef6e171a8162&oe=5E58572A",
+    supplements: "Baby Horse food"
   }
 ];
